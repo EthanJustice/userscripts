@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Rust Doc/Crate Switcher
-// @version  0.0.1
+// @version  0.0.2
 // @grant    none
 // @include    https://crates.io/crates/*
 // @include    https://lib.rs/crates/*
@@ -29,7 +29,7 @@ let container = buildElement('div', '', {
 	style: `
 		position: fixed;
 		top: 2%;
-		left: 5%;
+		right: 2%;
 		display: block;
 		z-index: 999999;
 		background: #404040;
@@ -41,15 +41,16 @@ let linkStyles = `
 	color: #fafafa;
 	display: block;
 	font-size: 16pt;
-	margin: 2% auto;
+	margin: 2% 0;
+	text-align: left;
 `
 
-let docs = buildElement('a', 'Docs', {
+let docs = buildElement('a', 'Docs (docs.rs)', {
 	href: `https://docs.rs/${pack}/`,
 	style: linkStyles
 });
 
-let lib = buildElement('a', 'Lib', {
+let lib = buildElement('a', 'Info (lib.rs)', {
 	href: `https://lib.rs/crates/${pack}`,
 	style: linkStyles
 });
