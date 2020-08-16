@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name     RSS Notifier
 // @description  Notifier that site contains RSS feed hints
-// @version  0.0.1
+// @version  0.0.2
 // @grant    none
 // @run-at   document-idle
 // ==/UserScript==
 let feeds = false;
-if (document.head.querySelector('link[type="application/atom+xml')) { feeds = true }
+if (document.head.querySelector('link[type="application/atom+xml"],link[type="application/feed+json"],link[type="rss+xml"]')) { feeds = true }
 
 if (feeds == true) {
 	let newElement = document.createElement('p');
