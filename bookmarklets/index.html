@@ -9,7 +9,9 @@
 
     <body>
         <p><a href="javascript:prompt('', document.title);">Copy Title</a></p>
-        <p><a href="javascript:prompt('', `[${document.title}](${window.location.href})`);">Page to MarkDown</a></p>
+        <p><a href="javascript:(function(){let%20e=prompt('', `[${document.title}](${window.location.href})`)})();">Page
+                to MarkDown</a>
+        </p>
     </body>
 
 </html>

@@ -6,11 +6,17 @@
 // @run-at   document-idle
 // ==/UserScript==
 let feeds = false;
-if (document.head.querySelector('link[type="application/atom+xml"],link[type="application/feed+json"],link[type="rss+xml"]')) { feeds = true }
+if (
+    document.head.querySelector(
+        'link[type="application/atom+xml"],link[type="application/feed+json"],link[type="rss+xml"]'
+    )
+) {
+    feeds = true;
+}
 
 if (feeds == true) {
-	let newElement = document.createElement('p');
-	newElement.style = `
+    let newElement = document.createElement("p");
+    newElement.style = `
 		background: crimson;
 		color: black;
 		position: absolute;
@@ -21,9 +27,9 @@ if (feeds == true) {
 		z-index: 99999;
 		text-align: center;
 		font-size: 20pt;
-	`
-	newElement.innerText = 'Feeds';
-	document.body.insertBefore(newElement, document.body.firstChild);
+	`;
+    newElement.innerText = "Feeds";
+    document.body.insertBefore(newElement, document.body.firstChild);
 
-	setTimeout(() => newElement.remove(), 3000);
+    setTimeout(() => newElement.remove(), 3000);
 }
