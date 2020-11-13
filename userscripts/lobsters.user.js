@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name     lobste.rs styling
+// @description  simple dark mode styling for lobste.rs
 // @version  0.0.1
 // @grant    none
 // @run-at   document-end
