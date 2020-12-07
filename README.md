@@ -79,3 +79,9 @@ Generates a small popup if a site has an RSS feed. Note this sometimes doesn't w
 Generates a small popup for easily switching between `lib.rs` and `docs.rs`.
 
 [UserScript](https://github.com/EthanJustice/UserScripts/tree/master/userscripts/rust-doc-switcher.user.js)
+
+## Wikipedia Mobile Redirect
+
+Redirects the desktop Wikipedia site to the mobile version, as it looks somewhat nicer.
+
+[UserScript](https://github.com/EthanJustice/UserScripts/tree/master/userscripts/wikipedia-mobile-redirect.user.js)
